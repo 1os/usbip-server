@@ -1,0 +1,6 @@
+#!/bin/sh -e
+
+echo "busid=$(snapctl get busid)" 
+
+$SNAP/usr/bin/usbip unbind -b $(snapctl get busid)
+$SNAP/usr/bin/usbip bind -b $(snapctl get busid)

@@ -1,0 +1,31 @@
+name: usbip-server
+base: core20
+#title: usbip server
+architectures:
+  - build-on: armhf
+  - build-on: arm64
+version: '2022.05.04'
+summary: usbip server # 79 char long summary
+description: |
+  usbip server
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
+icon: ./icon.png
+
+apps:    
+  usbip-server:
+    command: run.sh
+    stop-command: stop.sh
+    stop-timeout: 10s
+    daemon: simple
+    restart-condition: always
+    plugs: [network, network-bind, raw-usb, hardware-observe, io-ports-control, serial-port]
+parts:
+  assets:
+    source: assets/
+    plugin: dump
+    stage-packages:
+      - linux-tools-generic
+      - dpkg
+      - lsb
+      - lsb-release
