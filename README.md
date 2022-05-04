@@ -1,2 +1,2 @@
 # cloudfprint
-Bitrix24 Cloud Cash Machine on Ruspberry Pi
+usbip server on Ruspberry Pi
