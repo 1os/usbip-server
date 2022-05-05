@@ -25,7 +25,7 @@ parts:
     source: assets/
     plugin: dump
     stage-packages:
-      - linux-tools-raspi
+      - linux-tools-5.4.0-1059-raspi
       - dpkg
       - lsb
       - lsb-release
