@@ -25,7 +25,7 @@ parts:
     source: assets/
     plugin: dump
     stage-packages:
-      - linux-tools-5.4.0-1059
+      - linux-tools-5.4.0-1059-generic
       - dpkg
       - lsb
       - lsb-release
