@@ -4,7 +4,7 @@ base: core20
 architectures:
   - build-on: armhf
   - build-on: arm64
-version: '2022.05.04'
+version: '2022.05.05'
 summary: usbip server # 79 char long summary
 description: |
   usbip server
@@ -25,7 +25,7 @@ parts:
     source: assets/
     plugin: dump
     stage-packages:
-      - linux-tools-generic
+      - linux-tools-raspi
       - dpkg
       - lsb
       - lsb-release
